@@ -1,0 +1,34 @@
+version: '3'
+services:
+  postgres-development:
+    image: postgres:12.0
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: snippet_development
+    volumes:
+      - ./data/dev:/var/lib/postgresql/data/
+    command: postgres -c log_destination=stderr -c log_statement=all -c log_connections=on -c log_disconnections=on
+    ports:
+      - 15432:5432
+    logging:
+      options:
+        max-size: "10k"
+        max-file: "5"
+  postgres-test:
+    image: postgres:12.0
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: snippet_test
+    volumes:
+      - ./data/test:/var/lib/postgresql/data/
+    command: postgres -c log_destination=stderr -c log_statement=all -c log_connections=on -c log_disconnections=on
+    ports:
+      - 5432:5432
+    logging:
+      options:
+        max-size: "10k"
+        max-file: "5"
+    depends_on:
+      - postgres-development
