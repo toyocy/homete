@@ -16,6 +16,7 @@ gem 'slim-rails'
 gem 'html2slim'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
+gem 'rails-i18n', '~> 5.1'
 
 group :development, :test do
   gem 'bullet'
