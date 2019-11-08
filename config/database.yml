@@ -27,13 +27,13 @@ default: &default
 development:
   <<: *default
   port: 15432
-  database: snippet_development
+  database: homete_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: snippet
+  #username: homete
 
   # The password associated with the postgres role (username).
   #password:
@@ -62,7 +62,7 @@ development:
 test:
   <<: *default
   port: 5432
-  database: snippet_test
+  database: homete_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -85,6 +85,6 @@ test:
 #
 production:
   <<: *default
-  database: snippet_production
-  username: snippet
-  password: <%= ENV['SNIPPET_DATABASE_PASSWORD'] %>
+  database: homete_production
+  username: homete
+  password: <%= ENV['homete_DATABASE_PASSWORD'] %>

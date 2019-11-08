@@ -5,7 +5,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: snippet_development
+      POSTGRES_DB: homete_development
     volumes:
       - ./data/dev:/var/lib/postgresql/data/
     command: postgres -c log_destination=stderr -c log_statement=all -c log_connections=on -c log_disconnections=on
@@ -20,7 +20,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: snippet_test
+      POSTGRES_DB: homete_test
     volumes:
       - ./data/test:/var/lib/postgresql/data/
     command: postgres -c log_destination=stderr -c log_statement=all -c log_connections=on -c log_disconnections=on

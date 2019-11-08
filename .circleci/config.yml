@@ -20,7 +20,7 @@ jobs:
       - image: circleci/postgres:12.0
         environment:
           POSTGRES_USER: postgres
-          POSTGRES_DB: snippet_test
+          POSTGRES_DB: homete_test
           POSTGRES_PASSWORD: postgres
 
     working_directory: ~/repo
