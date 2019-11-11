@@ -3,16 +3,12 @@
 # Table name: users
 #
 #  id              :integer          not null, primary key
-#  email           :string
 #  username        :string
+#  display_name    :string           default("")
+#  introduction    :text             default("")
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  password_digest :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  email: test@example.com
-  username: test-user
-  password_digest: <%= User.digest('password') %>
