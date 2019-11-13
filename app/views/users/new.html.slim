@@ -1,2 +1,15 @@
-h1 Users#new
-p Find me in app/views/users/new.html.slim
+h1 SignUp
+
+= form_with(model: @user, local: true) do |f|
+  == render 'shared/error_messages'
+  
+  = f.label :username
+  = f.text_field :username, class: 'form-control'
+
+  = f.label :password
+  = f.password_field :password, class: 'form-control'
+
+  = f.label :password_confirmation
+  = f.password_field :password_confirmation, class: 'form-control'
+
+  = f.submit '登録しました'
