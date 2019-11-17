@@ -1,4 +1,19 @@
-h1 StaticPages#home
-p Find me in app/views/static_pages/home.html.slim
+.center.jumbotron
 
-= link_to 'ユーザー登録', signup_path
+  h1 Homete
+  h2
+    |
+      Homete はみんなでほめ合うプラットフォームです
+    br
+    |
+      がんばったことをどんどん共有して、どんどんほめ合おう
+  br
+
+  h2
+    |
+      最近投稿された ほめて
+
+|
+  まずは登録してみよう
+br
+= link_to '登録', signup_path, class: 'btn btn-primary'
