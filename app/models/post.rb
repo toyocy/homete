@@ -10,4 +10,6 @@
 #
 
 class Post < ApplicationRecord
+  validates :content, presence: true, length: { maximum: 250 }
+  validates :crap, numericality: { only_integer: true }
 end

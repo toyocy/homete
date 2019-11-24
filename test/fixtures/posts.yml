@@ -14,7 +14,3 @@
 one:
   content: MyString
   crap: 1
-
-two:
-  content: MyString
-  crap: 1
