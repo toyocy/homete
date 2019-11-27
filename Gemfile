@@ -19,6 +19,10 @@ gem 'jquery-rails'
 gem 'rails-i18n', '~> 5.1'
 gem 'bcrypt'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development, :test do
   gem 'bullet'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
