@@ -1,6 +1,6 @@
 h1 SignUp
 
-= form_with(model: @user, local: true) do |f|
+= form_for @user do |f|
   == render 'shared/error_messages'
   
   = f.label :username
